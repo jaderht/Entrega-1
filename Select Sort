@@ -1,0 +1,33 @@
+using System;
+using System.Globalization;
+
+namespace SelectSort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] Vetor = { 27, 115, 8, 90, 3 };
+            int i= 0;
+            int tamanho = Vetor.Length;
+            for(i=0;i<=tamanho-2;i++)
+            {
+                int Menor = Vetor[i];
+                int Posicaomenor = i;
+                for (int j = i + 1; j <= tamanho - 1; j++)
+                {
+                    if (Vetor[j] < Menor)
+                    {
+                        Menor = Vetor[j];
+                        Posicaomenor = j;
+                    }
+
+                }
+                Vetor[Posicaomenor] = Vetor[i];
+                Vetor[i] = Menor;
+            }
+            
+
+        }
+    }
+}
