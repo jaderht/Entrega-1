@@ -1,0 +1,31 @@
+using System;
+
+namespace InsertionSort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] vetor= { 27, 115, 8, 90, 3 };
+            int i = 1;
+            int j = 0;
+            int Aux;
+            for (i = 1; i < vetor.Length; i++)
+            {
+                Aux = vetor[i];
+                j = i - 1;
+                while (j >= 0 && vetor[j] > Aux)
+                {
+                    vetor[j + 1] = vetor[j];
+                        j--;
+                }
+                vetor[j + 1] = Aux;
+
+                    
+             
+
+            }
+
+        }
+    }
+}
